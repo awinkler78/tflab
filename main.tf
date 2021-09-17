@@ -52,7 +52,7 @@ resource "azurerm_subnet" "tflab_sn" {
   name                 = "${random_pet.tflab_pet.id}-subnet"
   resource_group_name  = azurerm_resource_group.tflab_rg.name
   virtual_network_name = azurerm_virtual_network.tflab_vn.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_security_group" "tflab_sg" {
@@ -87,7 +87,7 @@ resource "azurerm_network_security_group" "tflab_sg" {
 
   security_rule {
     name                       = "SSH"
-    priority                   = 101
+    priority                   = 102
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
