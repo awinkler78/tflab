@@ -87,7 +87,7 @@ resource "azurerm_network_security_group" "tflab_sg" {
 
   security_rule {
     name                       = "SSH"
-    priority                   = 102
+    priority                   = 103
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
